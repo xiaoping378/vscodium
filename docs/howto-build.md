@@ -74,6 +74,15 @@ The script `dev/build.sh` provides several flags:
 - `-p`: generate the packages/assets/installers
 - `-s`: do not retrieve the source code of Visual Studio Code, it won't delete the existing build
 
+## 更换图标，需要安装依赖
+
+```bash
+apt install librsvg2-bin icoutils icnsutils graphicsmagick-imagemagick-compat imagemagick
+# 以编译windows为例，需要删除已有的图标文件
+# rm src/stable/resources/win32/* -rf 
+./icons/build_icons.sh
+```
+
 ## <a id="build-ci"></a>Build for CI/Downstream
 
 Here is the base script to build VSCodium:

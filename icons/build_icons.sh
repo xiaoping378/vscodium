@@ -4,7 +4,7 @@
 set -e
 
 # DEBUG
-# set -o xtrace
+set -o xtrace
 
 QUALITY="stable"
 COLOR="blue1"
@@ -110,7 +110,8 @@ build_server() { # {{{
 
 build_windows_main() { # {{{
   if [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/win32/code.ico" ]]; then
-    wget "https://raw.githubusercontent.com/VSCodium/icons/main/icons/win32/nobg/${COLOR}/paulo22s.ico" -O "${SRC_PREFIX}src/${QUALITY}/resources/win32/code.ico"
+    # wget "https://raw.githubusercontent.com/VSCodium/icons/main/icons/win32/nobg/${COLOR}/paulo22s.ico" -O "${SRC_PREFIX}src/${QUALITY}/resources/win32/code.ico"
+    echo "AIDE don't download"
   fi
 } # }}}
 
@@ -133,6 +134,7 @@ build_windows_type() { # {{{
     rsvg-convert -w "${LOGO_SIZE}" -h "${LOGO_SIZE}" "icons/${QUALITY}/codium_cnl.svg" -o "code_logo.png"
 
     composite -gravity "${GRAVITY}" "code_logo.png" "${FILE_PATH}" "${FILE_PATH}"
+    # 150*150，需要更换参数 -geometry
   fi
 } # }}}
 
@@ -145,14 +147,14 @@ build_windows_types() { # {{{
     if [[ -f "${file}" ]]; then
       name=$(basename "${file}" '.ico')
 
-      if [[ "${name}" != 'code' ]] && [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/win32/${name}.ico" ]]; then
+      if  [[ ! -f "${SRC_PREFIX}src/${QUALITY}/resources/win32/${name}.ico" ]]; then
         icotool -x -w 256 "${file}"
 
-        composite -geometry +150+185 "code_logo.png" "${name}_9_256x256x32.png" "${name}.png"
+        composite -geometry +150+185 "code_logo.png" "${name}_1_256x256x32.png" "${name}.png"
 
         convert "${name}.png" -define icon:auto-resize=256,128,96,64,48,32,24,20,16 "${SRC_PREFIX}src/${QUALITY}/resources/win32/${name}.ico"
 
-        rm "${name}_9_256x256x32.png" "${name}.png"
+        rm "${name}_1_256x256x32.png" "${name}.png"
       fi
     fi
   done
