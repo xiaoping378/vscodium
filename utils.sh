@@ -2,9 +2,9 @@
 
 APP_NAME="${APP_NAME:-AIDE}"
 APP_NAME_LC="$( echo "${APP_NAME}" | awk '{print tolower($0)}' )"
-BINARY_NAME="${BINARY_NAME:-codium}"
-GH_REPO_PATH="${GH_REPO_PATH:-VSCodium/vscodium}"
-ORG_NAME="${ORG_NAME:-EBchinatech}"
+BINARY_NAME="${BINARY_NAME:-aide}"
+GH_REPO_PATH="${GH_REPO_PATH:-xiaoping378/vscodium}"
+ORG_NAME="${ORG_NAME:-EB}"
 
 # All common functions can be added to this file
 
