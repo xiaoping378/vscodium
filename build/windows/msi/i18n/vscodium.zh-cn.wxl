@@ -6,9 +6,9 @@
   <String Id="ProductUrlInfoAbout">https://github.com/VSCodium/vscodium</String>
   <String Id="ProductUrlUpdateInfo">https://github.com/VSCodium/vscodium</String>
   <String Id="PackageDescription">Package with @@PRODUCT_NAME@@</String>
-  <String Id="FeatureStartMenuShortcutTitle">Start Menu shortcut</String>
+  <String Id="FeatureStartMenuShortcutTitle">开始菜单快捷方式</String>
   <String Id="FeatureStartMenuShortcutDescription">Create a start menu icon.</String>
-  <String Id="FeatureDesktopShortcutTitle">Desktop shortcut</String>
+  <String Id="FeatureDesktopShortcutTitle">桌面快捷方式</String>
   <String Id="FeatureDesktopShortcutDescription">Create a desktop icon.</String>
   <String Id="FeatureFileTypeAssociationsTitle">File Associations</String>
   <String Id="FeatureFileTypeAssociationsDescription">Register @@PRODUCT_NAME@@ as an editor for supported file types.</String>
