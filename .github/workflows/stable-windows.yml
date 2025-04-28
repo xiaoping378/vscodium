@@ -29,7 +29,8 @@ env:
   ASSETS_REPOSITORY: ${{ github.repository }}
   BINARY_NAME: aide
   GH_REPO_PATH: ${{ github.repository }}
-  ORG_NAME: ${{ github.repository_owner }}
+  # ORG_NAME: ${{ github.repository_owner }}
+  ORG_NAME: EB
   OS_NAME: windows
   VERSIONS_REPOSITORY: ${{ github.repository_owner }}/versions
   VSCODE_QUALITY: stable
@@ -151,7 +152,7 @@ jobs:
       matrix:
         vscode_arch:
           - x64
-          - arm64
+          # - arm64
     defaults:
       run:
         shell: bash
