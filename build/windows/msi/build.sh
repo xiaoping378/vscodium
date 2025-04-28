@@ -26,8 +26,8 @@ fi
 PRODUCT_ID=$( powershell.exe -command "[guid]::NewGuid().ToString().ToUpper()" )
 PRODUCT_ID="${PRODUCT_ID%%[[:cntrl:]]}"
 
-CULTURE="zh-cn"
-LANGIDS="2052"
+CULTURE="en-us"
+LANGIDS="1033"
 
 SETUP_RELEASE_DIR=".\\releasedir"
 BINARY_DIR="..\\..\\..\\VSCode-win32-${VSCODE_ARCH}"
@@ -35,7 +35,6 @@ LICENSE_DIR="..\\..\\..\\vscode"
 PROGRAM_FILES_86=$( env | sed -n 's/^ProgramFiles(x86)=//p' )
 
 if [[ -z "${1}" ]]; then
-
 	OUTPUT_BASE_FILENAME="${APP_NAME}-${VSCODE_ARCH}-${RELEASE_VERSION}"
 else
 	OUTPUT_BASE_FILENAME="${APP_NAME}-${VSCODE_ARCH}-${1}-${RELEASE_VERSION}"
