@@ -5,13 +5,13 @@
 # to run with Bash: "C:\Program Files\Git\bin\bash.exe" ./dev/build.sh
 ###
 
-export APP_NAME="VSCodium"
-export BINARY_NAME="codium"
+export APP_NAME="AIDE"
+export BINARY_NAME="aide"
 export CI_BUILD="no"
-export GH_REPO_PATH="VSCodium/vscodium"
-export ORG_NAME="VSCodium"
+export GH_REPO_PATH="xiaoping378/vscodium"
+export ORG_NAME="EB"
 export SHOULD_BUILD="yes"
-export SKIP_ASSETS="yes"
+export SKIP_ASSETS="no"
 export SKIP_BUILD="no"
 export SKIP_SOURCE="no"
 export VSCODE_LATEST="no"
