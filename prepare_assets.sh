@@ -134,12 +134,12 @@ elif [[ "${OS_NAME}" == "windows" ]]; then
   if [[ "${VSCODE_ARCH}" == "ia32" || "${VSCODE_ARCH}" == "x64" ]]; then
     if [[ "${SHOULD_BUILD_MSI}" != "no" ]]; then
       echo "Moving MSI"
-      mv "build\\windows\\msi\\releasedir\\${APP_NAME}-${VSCODE_ARCH}-${RELEASE_VERSION}.msi" assets/
+      mv "build\\windows\\msi\\releasedir\\VSCodium-${VSCODE_ARCH}-${RELEASE_VERSION}.msi" assets/
     fi
 
     if [[ "${SHOULD_BUILD_MSI_NOUP}" != "no" ]]; then
       echo "Moving MSI with disabled updates"
-      mv "build\\windows\\msi\\releasedir\\${APP_NAME}-${VSCODE_ARCH}-updates-disabled-${RELEASE_VERSION}.msi" assets/
+      mv "build\\windows\\msi\\releasedir\\VSCodium-${VSCODE_ARCH}-updates-disabled-${RELEASE_VERSION}.msi" assets/
     fi
   fi
 
